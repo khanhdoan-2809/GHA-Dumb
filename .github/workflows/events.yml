@@ -1,9 +1,12 @@
-name: Activities
+name: Events
 on: 
     pull_request:
         types:
             - opened
     workflow_dispatch:
+    push:
+        branches:
+          - main
 jobs:   
   deployment:
     runs-on: ubuntu-latest
