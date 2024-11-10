@@ -30,6 +30,7 @@ jobs:
           working-directory: ../../
           name: dist-files
           path: |
+            build
             package.json
   deploy:
     needs: build
