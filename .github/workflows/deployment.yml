@@ -39,6 +39,7 @@ jobs:
       - name: Get build artifacts
         uses: action/download-artifact@v3
         with:
+          working-directory: ../../
           name: dist-files
       - name: Output contents
         run: ls
