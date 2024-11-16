@@ -1,4 +1,4 @@
-name: Test Project
+name: Use Resuable
 on: [push, workflow_dispatch]
 jobs:
   lint:
@@ -66,6 +66,8 @@ jobs:
   deploy:
     needs: build
     uses: ./.github/workflows/resuable.yml    
+    with:
+        artifact-name: dist-files
   report:
     needs: [lint, deploy]
     if: failure()
